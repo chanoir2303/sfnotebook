@@ -1,0 +1,23 @@
+<h1>Person #<%= @person.id %> Details</h1>
+
+<%= @person.first_name %>
+<%= @person.middle_name %>
+<%= @person.last_name %>
+<%= @person.user_name %>
+<%= @person.nationality %>
+<%= @person.birth_date %>
+<%= @person.currently_working_as %>
+<%= @person.currently_working_at %>
+<%= @person.currently_living_in %>
+<%= @person.is_privately_wanted %>
+<%= @person.is_publicly_wanted %>
+<%= @person.is_dangerous %>
+<%= @person.gender %>
+<%= @person.last_seen_date %>
+<%= @person.last_seen_place %>
+
+<%= link_to 'Edit', edit_person_path(@person) %>
+<%= link_to "Destroy", person_path(@person), data: {
+  turbo_method: :delete,
+  turbo_confirm: "Are you sure?"
+} %>
