@@ -1,0 +1,61 @@
+<h2>Add a network:</h2>
+<%= form_with model: [ @person, @person.networks.build ] do |form| %>
+  <div>
+    <%= form.label :twitter %>
+    <%= form.text_field :twitter %>
+  </div>
+
+  <div>
+    <%= form.label :instagram %>
+    <%= form.text_field :instagram %>
+  </div>
+
+  <div>
+    <%= form.label :facebook %>
+    <%= form.text_field :facebook %>
+  </div>
+
+  <div>
+    <%= form.label :whatsapp %>
+    <%= form.text_field :whatsapp %>
+  </div>
+
+  <div>
+    <%= form.label :snapchat %>
+    <%= form.text_field :snapchat %>
+  </div>
+
+  <div>
+    <%= form.label :discord %>
+    <%= form.text_field :discord %>
+  </div>
+
+  <div>
+    <%= form.label :pinterest %>
+    <%= form.text_field :pinterest %>
+  </div>
+
+  <div>
+    <%= form.label :apple %>
+    <%= form.text_field :apple %>
+  </div>
+
+  <div>
+    <%= form.label :google %>
+    <%= form.text_field :google %>
+  </div>
+
+  <div>
+    <%= form.label :microsoft %>
+    <%= form.text_field :microsoft %>
+  </div>
+
+  <div>
+    <%= form.label :mastodon %>
+    <%= form.text_field :mastodon %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

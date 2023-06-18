@@ -17,7 +17,21 @@
 <%= @person.last_seen_place %>
 
 <%= link_to 'Edit', edit_person_path(@person) %>
-<%= link_to "Destroy", person_path(@person), data: {
+<%= link_to 'Back', :back %>
+<%= link_to 'Destroy', person_path(@person), data: {
   turbo_method: :delete,
   turbo_confirm: "Are you sure?"
 } %>
+
+<h2>Networks</h2>
+<% @person.networks.each do |network| %>
+  <div>
+    <%= network.twitter %>
+  </div>
+
+  <div>
+    <%= network.instagram %>
+  </div>
+<% end %>
+
+<%= render 'networks/form' %>
