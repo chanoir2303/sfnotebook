@@ -10,7 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_17_211207) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_18_131004) do
+  create_table "networks", force: :cascade do |t|
+    t.string "twitter"
+    t.string "instagram"
+    t.string "facebook"
+    t.string "whatsapp"
+    t.string "snapchat"
+    t.string "discord"
+    t.string "pinterest"
+    t.string "apple"
+    t.string "google"
+    t.string "microsoft"
+    t.string "mastodon"
+    t.integer "person_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["person_id"], name: "index_networks_on_person_id"
+  end
+
   create_table "people", force: :cascade do |t|
     t.string "first_name"
     t.string "middle_name"
@@ -31,4 +49,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_17_211207) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "networks", "people"
 end
