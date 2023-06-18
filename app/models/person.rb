@@ -3,4 +3,5 @@
 # app/models/person.rb
 class Person < ApplicationRecord
   has_many :networks
+  has_many :emails
 end
