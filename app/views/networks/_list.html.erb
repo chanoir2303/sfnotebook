@@ -1,0 +1,106 @@
+<h2>Networks</h2>
+
+<div>
+  <h5>Twitter: </h5>
+  <% @person.networks.each do |network| %>
+    <ul>
+      <% if network.twitter.present? %>
+        <li><%= network.twitter %></li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>
+
+<div>
+  <h5>Instagram:</h5>
+  <% @person.networks.each do |network| %>
+    <ul>
+      <% if network.instagram.present? %>
+        <li><%= network.instagram %></li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>
+
+
+<h5>Facebook: </h5>
+<% @person.networks.each do |network| %>
+  <ul>
+    <% if network.facebook.present? %>
+      <li><%= network.facebook %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<h5>Whatsapp: </h5>
+<% @person.networks.each do |network| %>
+  <ul>
+    <% if network.whatsapp.present? %>
+      <li><%= network.whatsapp %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<h5>Snapchat: </h5>
+<% @person.networks.each do |network| %>
+  <ul>
+    <% if network.snapchat.present? %>
+      <li><%= network.snapchat %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<h5>Discord: </h5>
+<% @person.networks.each do |network| %>
+  <ul>
+    <% if network.discord.present? %>
+      <li><%= network.discord %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<h5>Pinterest: </h5>
+<% @person.networks.each do |network| %>
+  <ul>
+    <% if network.pinterest.present? %>
+      <li><%= network.pinterest %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<h5>Apple: </h5>
+<% @person.networks.each do |network| %>
+  <ul>
+    <% if network.apple.present? %>
+      <li><%= network.apple %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<h5>Google: </h5>
+<% @person.networks.each do |network| %>
+  <ul>
+    <% if network.google.present? %>
+      <li><%= network.google %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<h5>Microsoft: </h5>
+<% @person.networks.each do |network| %>
+  <ul>
+    <% if network.microsoft.present? %>
+      <li><%= network.microsoft %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<h5>Mastodon: </h5>
+<% @person.networks.each do |network| %>
+  <ul>
+    <% if network.mastodon.present? %>
+      <li><%= network.mastodon %></li>
+    <% end %>
+  </ul>
+<% end %>
+
