@@ -1,80 +1,67 @@
 <%= form_with model: @person do |form| %>
-  <div>
-    <%= form.label :first_name %><br>
-    <%= form.text_field :first_name %>
-  </div>
+  <div class="container">
+    <div class="field">
+      <%= form.text_field :first_name, class: 'input', placeholder: 'Test' %>
+    </div>
 
-  <div>
-    <%= form.label :middle_name %><br>
-    <%= form.text_field :middle_name %><br>
-  </div>
+    <div class="block">
+      <%= form.text_field :middle_name, class: 'input', placeholder: 'Test' %><br>
+    </div>
 
-  <div>
-    <%= form.label :last_name %><br>
-    <%= form.text_field :last_name %><br>
-  </div>
+    <div class="block">
+      <%= form.text_field :last_name, class: 'input', placeholder: 'Test' %><br>
+    </div>
 
-  <div>
-    <%= form.label :user_name %><br>
-    <%= form.text_field :user_name %><br>
-  </div>
+    <div class="block">
+      <%= form.text_field :user_name, class: 'input', placeholder: 'Test' %><br>
+    </div>
 
-  <div>
-    <%= form.label :nationality %><br>
-    <%= form.text_field :nationality %><br>
-  </div>
+    <div class="block">
+      <%= form.text_field :nationality, class: 'input', placeholder: 'Test' %><br>
+    </div>
 
-  <div>
-    <%= form.label :birth_date %><br>
-    <%= form.text_field :birth_date %><br>
-  </div>
+    <div class="block">
+      <%= form.text_field :birth_date, class: 'input', placeholder: 'Test' %><br>
+    </div>
 
-  <div>
-    <%= form.label :currently_working_as %><br>
-    <%= form.text_field :currently_working_as %><br>
-  </div>
+    <div class="block">
+      <%= form.text_field :currently_working_as, class: 'input', placeholder: 'Test' %><br>
+    </div>
 
-  <div>
-    <%= form.label :currently_working_at %><br>
-    <%= form.text_field :currently_working_at %><br>
-  </div>
+    <div class="block">
+      <%= form.text_field :currently_working_at, class: 'input', placeholder: 'Test' %><br>
+    </div>
 
-  <div>
-    <%= form.label :currently_living_in %><br>
-    <%= form.text_field :currently_living_in %><br>
-  </div>
+    <div class="block">
+      <%= form.text_field :currently_living_in, class: 'input', placeholder: 'Test' %><br>
+    </div>
 
-  <div>
-    <%= form.label :is_privately_wanted %><br>
-    <%= form.check_box :is_privately_wanted %><br>
-  </div>
+    <div class="block">
+      <%= form.check_box :is_privately_wanted, class: 'checkbox' %><br>
+    </div>
 
-  <div>
-    <%= form.label :is_publicly_wanted %><br>
-    <%= form.check_box :is_publicly_wanted %><br>
-  </div>
+    <div class="block">
+      <%= form.check_box :is_publicly_wanted, class: 'checkbox' %><br>
+    </div>
 
-  <div>
-    <%= form.label :is_dangerous %><br>
-    <%= form.check_box :is_dangerous %><br>
-  </div>
+    <div class="block">
+      <%= form.check_box :is_dangerous, class: 'checkbox' %><br>
+    </div>
 
-  <div>
-    <%= form.label :gender %><br>
-    <%= form.select :gender, %w[Male Female Other] %><br>
-  </div>
+    <div class="block">
+      <%= form.select :gender, %w[Male Female Other],  class: 'select' %><br>
+    </div>
 
-  <div>
-    <%= form.label :last_seen_date %><br>
-    <%= form.text_field :last_seen_date %><br>
-  </div>
+    <div class="block">
+      <%= form.text_field :last_seen_date, class: 'input', placeholder: 'Test' %><br>
+    </div>
 
-  <div>
-    <%= form.label :last_seen_place %><br>
-    <%= form.text_field :last_seen_place %><br>
-  </div>
+    <div class="block">
+      <%= form.text_field :last_seen_place, class: 'input', placeholder: 'Test' %><br>
+    </div>
 
-  <div>
-    <%= form.submit %>
+    <div class="block">
+      <%= form.submit %>
+    </div>
   </div>
 <% end %>
