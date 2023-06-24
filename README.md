@@ -7,6 +7,7 @@
 - RSpec
 - Capybara
 - Factory Bot
+- Bulma
 
 ### Database
 - SQLite (enable)
@@ -16,4 +17,6 @@
 #### Coverage: 0%
 - Requests
 - Features
+- Views
+- Policies
 - Factories
