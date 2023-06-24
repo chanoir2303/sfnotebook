@@ -1,5 +1,5 @@
-<h1>Person #<%= @person.id %> Details</h1>
-
+<h1><%= t('people.page_name.show') %></h1>
+<%= @person.id %>
 <%= @person.first_name %>
 <%= @person.middle_name %>
 <%= @person.last_name %>
@@ -16,11 +16,14 @@
 <%= @person.last_seen_date %>
 <%= @person.last_seen_place %>
 
-<%= link_to 'Edit', edit_person_path(@person) %>
-<%= link_to 'Back', root_path %>
-<%= link_to 'Destroy', person_path(@person), data: {
+<%= link_to t('button.edit'), edit_person_path(@person), class: 'button is-info' %>
+<%= link_to t('button.back'), root_path, class: 'button is-info is-light' %>
+<%= link_to t('button.destroy'),
+            person_path(@person),
+            class: 'button is-danger',
+            data: {
   turbo_method: :delete,
-  turbo_confirm: "Are you sure?"
+  turbo_confirm: t('action.confirmation'),
 } %>
 
 <%= render 'networks/list' %>

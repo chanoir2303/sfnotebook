@@ -1,4 +1,4 @@
-<h1>People table</h1>
+<h1><%= t('people.page_name.index') %></h1>
 
 <ul>
   <% @people.each do |people| %>
@@ -7,5 +7,5 @@
     </li>
   <% end %>
 
-  <%= link_to 'Register a new person', new_person_path %>
+  <%= link_to t('people.page_name.create'), new_person_path %>
 </ul>

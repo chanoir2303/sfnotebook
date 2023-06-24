@@ -1,4 +1,4 @@
-<h2>Add a network:</h2>
+<h2><%= t('people.networks.page_name.create') %></h2>
 <%= form_with model: [ @person, @person.networks.build ] do |form| %>
   <div>
     <%= form.label :twitter %>
@@ -56,6 +56,6 @@
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit t("button.submit"), class: "button is-info" %>
   </div>
 <% end %>
