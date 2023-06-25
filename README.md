@@ -2,16 +2,12 @@
 - 3.1.4
 
 ### System dependencies
-- Rails
-- Rubocop
-- RSpec
-- Capybara
-- Factory Bot
-- Bulma
+- [Gemfile](https://github.com/chanoir2303/sfnotebook/blob/main/Gemfile)
+
 
 ### Database
-- SQLite (enable)
-- PostgreSQL (pending)
+- SQLite (disable)
+- PostgreSQL (enable)
 
 ### Tests
 #### Coverage: 0%
