@@ -4,4 +4,6 @@
 class Person < ApplicationRecord
   has_many :networks
   has_many :emails
+
+  belongs_to :user
 end
