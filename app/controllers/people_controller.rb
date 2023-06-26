@@ -2,6 +2,7 @@
 
 # app/controllers/people_controller.rb
 class PeopleController < ApplicationController
+  before_action :authenticate_user!
   def index
     @people = Person.all
   end
@@ -11,11 +12,11 @@ class PeopleController < ApplicationController
   end
 
   def new
-    @person = Person.new
+    @person = current_user.people.build
   end
 
   def create
-    @person = Person.new(person_params)
+    @person = current_user.people.build(person_params)
 
     if @person.save
       redirect_to @person

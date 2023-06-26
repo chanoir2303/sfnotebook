@@ -10,23 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_25_223839) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_25_220808) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "emails", force: :cascade do |t|
-    t.string "email"
     t.bigint "person_id", null: false
+    t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["person_id"], name: "index_emails_on_person_id"
   end
 
   create_table "networks", force: :cascade do |t|
+    t.bigint "person_id", null: false
     t.string "twitter"
     t.string "instagram"
     t.string "facebook"
     t.string "whatsapp"
+    t.string "tiktok"
     t.string "snapchat"
     t.string "discord"
     t.string "pinterest"
@@ -34,13 +36,17 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_25_223839) do
     t.string "google"
     t.string "microsoft"
     t.string "mastodon"
-    t.bigint "person_id", null: false
+    t.string "twitch"
+    t.string "kick"
+    t.string "adobe"
+    t.string "bereal"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["person_id"], name: "index_networks_on_person_id"
   end
 
   create_table "people", force: :cascade do |t|
+    t.bigint "user_id"
     t.string "first_name"
     t.string "middle_name"
     t.string "last_name"
@@ -58,6 +64,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_25_223839) do
     t.string "last_seen_place"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_people_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -66,9 +73,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_25_223839) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
+    t.string "current_sign_in_ip"
+    t.string "last_sign_in_ip"
+    t.integer "role", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "role", default: 0
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
