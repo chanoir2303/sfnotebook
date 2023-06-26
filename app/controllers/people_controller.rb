@@ -2,14 +2,12 @@
 
 # app/controllers/people_controller.rb
 class PeopleController < ApplicationController
-  before_action :authenticate_user!
   def index
     @people = Person.all
   end
 
   def show
     @person = Person.find(params[:id])
-    authorize @person
   end
 
   def new
