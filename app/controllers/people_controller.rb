@@ -5,6 +5,7 @@ class PeopleController < ApplicationController
   before_action :authenticate_user!
   def index
     @people = Person.all
+    search
   end
 
   def show
@@ -44,6 +45,17 @@ class PeopleController < ApplicationController
     @person.destroy
 
     redirect_to root_path, status: :see_other
+  end
+
+  def search
+    return if params[:query].blank?
+
+    @results = PgSearch.multisearch(params[:query])
+    if @results.empty?
+      flash[:danger] = I18n.t('error.not_found')
+    else
+      @r = @results.first.searchable
+    end
   end
 
   private
