@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-# app/models/person.rb
+# Person has many networks and emails and belongs to a User.
+# It has a search bar using multisearchable method against selected fields.
 class Person < ApplicationRecord
   include PgSearch::Model
 

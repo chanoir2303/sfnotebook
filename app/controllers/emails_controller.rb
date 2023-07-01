@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# app/controllers/emails_controller.rb
+# Handle emails registration. All Email belongs to a Person.
 class EmailsController < ApplicationController
   def create
     @person = Person.find(params[:person_id])
