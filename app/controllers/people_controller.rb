@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# app/controllers/people_controller.rb
+# CRUD for Person model.
 class PeopleController < ApplicationController
   before_action :authenticate_user!
   def index
