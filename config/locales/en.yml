@@ -1,9 +1,12 @@
 en:
+  error:
+    not_found: Nothing found
   button:
     submit: Submit
     edit: Edit
     back: Back
     destroy: Destroy
+    search: Go
   action:
     confirmation: Are you sure?
   email:
@@ -39,8 +42,8 @@ en:
       user_name: User Name
       nationality: Nationality
       birth_date: Birth Date
-      currently_working_as: Currently working at
-      currently_working_at: Currently working as
+      currently_working_as: Currently working as
+      currently_working_at: Currently working at
       currently_living_in: Currently living in
       is_privately_wanted: Is privately wanted
       is_publicly_wanted: Is publicly wanted
@@ -51,4 +54,6 @@ en:
         other: Other
       last_seen_date: Last seen date
       last_seen_place: Last seen place
+    label:
+      search_bar: Search
 

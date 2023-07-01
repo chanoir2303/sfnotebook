@@ -36,7 +36,7 @@ class PersonPolicy
     false
   end
 
-  class Scope
+  class Scope < Scope
     def initialize(user, scope)
       @user = user
       @scope = scope
