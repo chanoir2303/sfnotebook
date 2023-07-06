@@ -56,6 +56,16 @@ en:
     auth:
       sign_in: Log In
       sign_up: Sign Up
+    navbar:
+      links:
+        create: Create Record
+        dashboard: Dashboard
+        records: Records
+        people: People
+        emails: Emails
+        networks: Networks
+        library: Library
+        map: Map
   button:
     submit: Submit
     edit: Edit
@@ -64,6 +74,7 @@ en:
     search: Go
     sign_in: Log In
     sign_up: Sign Up
+    sign_out: Log Out
   action:
     confirmation: Are you sure?
     search: Search
