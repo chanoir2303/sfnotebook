@@ -1,7 +1,7 @@
-<h2><%= t('networks.page_name.index') %></h2>
+<h2><%= I18n.t('page.network.index') %></h2>
 
 <div>
-  <h5><%= t('networks.field.twitter') %></h5>
+  <h5><%= I18n.t('activerecord.attributes.network.twitter') %></h5>
   <% @person.networks.each do |network| %>
     <ul>
       <% if network.twitter.present? %>
@@ -12,7 +12,7 @@
 </div>
 
 <div>
-  <h5><%= t('networks.field.instagram') %></h5>
+  <h5><%= I18n.t('activerecord.attributes.network.instagram') %></h5>
   <% @person.networks.each do |network| %>
     <ul>
       <% if network.instagram.present? %>
@@ -23,7 +23,7 @@
 </div>
 
 
-<h5><%= t('networks.field.facebook') %></h5>
+<h5><%= I18n.t('activerecord.attributes.network.facebook') %></h5>
 <% @person.networks.each do |network| %>
   <ul>
     <% if network.facebook.present? %>
@@ -32,7 +32,7 @@
   </ul>
 <% end %>
 
-<h5><%= t('networks.field.whatsapp') %></h5>
+<h5><%= I18n.t('activerecord.attributes.network.whatsapp') %></h5>
 <% @person.networks.each do |network| %>
   <ul>
     <% if network.whatsapp.present? %>
@@ -41,7 +41,7 @@
   </ul>
 <% end %>
 
-<h5><%= t('networks.field.snapchat') %></h5>
+<h5><%= I18n.t('activerecord.attributes.network.snapchat') %></h5>
 <% @person.networks.each do |network| %>
   <ul>
     <% if network.snapchat.present? %>
@@ -50,7 +50,7 @@
   </ul>
 <% end %>
 
-<h5><%= t('networks.field.discord') %></h5>
+<h5><%= I18n.t('activerecord.attributes.network.discord') %></h5>
 <% @person.networks.each do |network| %>
   <ul>
     <% if network.discord.present? %>
@@ -59,7 +59,7 @@
   </ul>
 <% end %>
 
-<h5><%= t('networks.field.pinterest') %></h5>
+<h5><%= I18n.t('activerecord.attributes.network.pinterest') %></h5>
 <% @person.networks.each do |network| %>
   <ul>
     <% if network.pinterest.present? %>
@@ -68,7 +68,7 @@
   </ul>
 <% end %>
 
-<h5><%= t('networks.field.apple') %></h5>
+<h5><%= I18n.t('activerecord.attributes.network.apple') %></h5>
 <% @person.networks.each do |network| %>
   <ul>
     <% if network.apple.present? %>
@@ -77,7 +77,7 @@
   </ul>
 <% end %>
 
-<h5><%= t('networks.field.google') %></h5>
+<h5><%= I18n.t('activerecord.attributes.network.google') %></h5>
 <% @person.networks.each do |network| %>
   <ul>
     <% if network.google.present? %>
@@ -86,7 +86,7 @@
   </ul>
 <% end %>
 
-<h5><%= t('networks.field.microsoft') %></h5>
+<h5><%= I18n.t('activerecord.attributes.network.microsoft') %></h5>
 <% @person.networks.each do |network| %>
   <ul>
     <% if network.microsoft.present? %>
@@ -95,7 +95,7 @@
   </ul>
 <% end %>
 
-<h5><%= t('networks.field.mastodon') %></h5>
+<h5><%= I18n.t('activerecord.attributes.network.mastodon') %></h5>
 <% @person.networks.each do |network| %>
   <ul>
     <% if network.mastodon.present? %>
@@ -104,3 +104,38 @@
   </ul>
 <% end %>
 
+<h5><%= I18n.t('activerecord.attributes.network.twitch') %></h5>
+<% @person.networks.each do |network| %>
+  <ul>
+    <% if network.twitch.present? %>
+      <li><%= network.twitch %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<h5><%= I18n.t('activerecord.attributes.network.kick') %></h5>
+<% @person.networks.each do |network| %>
+  <ul>
+    <% if network.kick.present? %>
+      <li><%= network.kick %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<h5><%= I18n.t('activerecord.attributes.network.adobe') %></h5>
+<% @person.networks.each do |network| %>
+  <ul>
+    <% if network.adobe.present? %>
+      <li><%= network.adobe %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<h5><%= I18n.t('activerecord.attributes.network.bereal') %></h5>
+<% @person.networks.each do |network| %>
+  <ul>
+    <% if network.bereal.present? %>
+      <li><%= network.bereal %></li>
+    <% end %>
+  </ul>
+<% end %>

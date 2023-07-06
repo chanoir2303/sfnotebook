@@ -1,70 +1,70 @@
 <%= form_with model: [@user, @person] do |form| %>
-  <div class="container">
-    <div class="field">
-      <%= form.text_field :first_name, class: 'input', placeholder: t("people.field.first_name") %>
+  <div class='container'>
+    <div class='field'>
+      <%= form.text_field :first_name, class: 'input', placeholder: I18n.t('activerecord.attributes.person.first_name') %>
     </div>
 
-    <div class="block">
-      <%= form.text_field :middle_name, class: 'input', placeholder: t("people.field.middle_name") %>
+    <div class='block'>
+      <%= form.text_field :middle_name, class: 'input', placeholder: I18n.t('activerecord.attributes.person.middle_name') %>
     </div>
 
-    <div class="block">
-      <%= form.text_field :last_name, class: 'input', placeholder: t("people.field.last_name") %>
+    <div class='block'>
+      <%= form.text_field :last_name, class: 'input', placeholder: I18n.t('activerecord.attributes.person.last_name') %>
     </div>
 
-    <div class="block">
-      <%= form.text_field :user_name, class: 'input', placeholder: t("people.field.user_name")%>
+    <div class='block'>
+      <%= form.text_field :user_name, class: 'input', placeholder: I18n.t('activerecord.attributes.person.user_name')%>
     </div>
 
-    <div class="block">
-      <%= form.text_field :nationality, class: 'input', placeholder: t("people.field.nationality") %>
+    <div class='block'>
+      <%= form.text_field :nationality, class: 'input', placeholder: I18n.t('activerecord.attributes.person.nationality') %>
     </div>
 
-    <div class="block">
-      <%= form.text_field :birth_date, class: 'input', placeholder: t("people.field.birth_date") %>
+    <div class='block'>
+      <%= form.text_field :birth_date, class: 'input', placeholder: I18n.t('activerecord.attributes.person.birth_date') %>
     </div>
 
-    <div class="block">
-      <%= form.text_field :currently_working_as, class: 'input', placeholder: t("people.field.currently_working_as") %>
+    <div class='block'>
+      <%= form.text_field :currently_working_as, class: 'input', placeholder: I18n.t('activerecord.attributes.person.currently_working_as') %>
     </div>
 
-    <div class="block">
-      <%= form.text_field :currently_working_at, class: 'input', placeholder: t("people.field.currently_working_at") %>
+    <div class='block'>
+      <%= form.text_field :currently_working_at, class: 'input', placeholder: I18n.t('activerecord.attributes.person.currently_working_at') %>
     </div>
 
-    <div class="block">
-      <%= form.text_field :currently_living_in, class: 'input', placeholder: t("people.field.currently_living_in") %>
+    <div class='block'>
+      <%= form.text_field :currently_living_in, class: 'input', placeholder: I18n.t('activerecord.attributes.person.currently_living_in') %>
     </div>
 
-    <div class="block">
-      <%= form.label t('people.field.is_privately_wanted') %>
+    <div class='block'>
+      <%= form.label I18n.t('activerecord.attributes.person.is_privately_wanted') %>
       <%= form.check_box :is_privately_wanted, class: 'checkbox' %>
     </div>
 
-    <div class="block">
-      <%= form.label t('people.field.is_publicly_wanted') %>
+    <div class='block'>
+      <%= form.label I18n.t('activerecord.attributes.person.is_publicly_wanted') %>
       <%= form.check_box :is_publicly_wanted, class: 'checkbox' %>
     </div>
 
-    <div class="block">
-      <%= form.label t('people.field.is_dangerous') %>
+    <div class='block'>
+      <%= form.label I18n.t('activerecord.attributes.person.is_dangerous') %>
       <%= form.check_box :is_dangerous, class: 'checkbox' %>
     </div>
 
-    <div class="select">
-      <%= form.select :gender, [t('people.field.select_options.male'), t("people.field.select_options.female"), t("people.field.select_options.other")] %>
+    <div class='select'>
+      <%= form.select :gender, [I18n.t('activerecord.attributes.person.select_options.male'), I18n.t('activerecord.attributes.person.select_options.female'), I18n.t('activerecord.attributes.person.select_options.other')] %>
     </div>
 
-    <div class="block">
-      <%= form.text_field :last_seen_date, class: 'input', placeholder: t("people.field.last_seen_date") %>
+    <div class='block'>
+      <%= form.text_field :last_seen_date, class: 'input', placeholder: I18n.t('activerecord.attributes.person.last_seen_date') %>
     </div>
 
-    <div class="block">
-      <%= form.text_field :last_seen_place, class: 'input', placeholder: t("people.field.last_seen_place") %>
+    <div class='block'>
+      <%= form.text_field :last_seen_place, class: 'input', placeholder: I18n.t('activerecord.attributes.person.last_seen_place') %>
     </div>
 
-    <div class="block">
-      <%= form.submit t("button.submit"), class: "button is-info" %>
+    <div class='block'>
+      <%= form.submit I18n.t('button.submit'), class: 'button is-info' %>
     </div>
   </div>
 <% end %>

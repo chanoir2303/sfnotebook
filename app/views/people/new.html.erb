@@ -1,4 +1,4 @@
-<h1><%= t('people.page_name.create') %></h1>
+<h1><%= I18n.t('page.people.create') %></h1>
 
 <%= render 'form', person: @person %>
-<%= link_to t("button.back"), people_path, class: "button is-info is-light"  %>
+<%= link_to I18n.t("button.back"), people_path, class: "button is-info is-light"  %>
