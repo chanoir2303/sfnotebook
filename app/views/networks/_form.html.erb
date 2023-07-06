@@ -1,4 +1,4 @@
-<h2><%= t('people.networks.page_name.create') %></h2>
+<h2><%= I18n.t('page.network.create') %></h2>
 <%= form_with model: [ @person, @person.networks.build ] do |form| %>
   <div>
     <%= form.label :twitter %>
@@ -56,6 +56,26 @@
   </div>
 
   <div>
-    <%= form.submit t("button.submit"), class: "button is-info" %>
+    <%= form.label :twitch %>
+    <%= form.text_field :twitch %>
+  </div>
+
+  <div>
+    <%= form.label :kick %>
+    <%= form.text_field :kick %>
+  </div>
+
+  <div>
+    <%= form.label :adobe %>
+    <%= form.text_field :adobe %>
+  </div>
+
+  <div>
+    <%= form.label :bereal %>
+    <%= form.text_field :bereal %>
+  </div>
+
+  <div>
+    <%= form.submit I18n.t('button.submit'), class: 'button is-info' %>
   </div>
 <% end %>

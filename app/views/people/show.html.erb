@@ -1,4 +1,4 @@
-<h1><%= t('people.page_name.show') %></h1>
+<h1><%= I18n.t('page.people.show') %></h1>
 <%= @person.id %>
 <%= @person.first_name %>
 <%= @person.middle_name %>
@@ -16,14 +16,14 @@
 <%= @person.last_seen_date %>
 <%= @person.last_seen_place %>
 
-<%= link_to t('button.edit'), edit_person_path(@person), class: 'button is-info' %>
-<%= link_to t('button.back'), root_path, class: 'button is-info is-light' %>
-<%= link_to t('button.destroy'),
+<%= link_to I18n.t('button.edit'), edit_person_path(@person), class: 'button is-info' %>
+<%= link_to I18n.t('button.back'), root_path, class: 'button is-info is-light' %>
+<%= link_to I18n.t('button.destroy'),
             person_path(@person),
             class: 'button is-danger',
             data: {
   turbo_method: :delete,
-  turbo_confirm: t('action.confirmation'),
+  turbo_confirm: I18n.t('action.confirmation'),
 } %>
 
 <%= render 'networks/list' %>

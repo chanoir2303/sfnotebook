@@ -1,4 +1,4 @@
-<h1><%= t('people.page_name.index') %></h1>
+<h1><%= I18n.t('page.people.index') %></h1>
 
 <%= current_user.email %>
 <%= current_user.role %>
@@ -12,7 +12,6 @@
   <%= @r.first_name %>
 <% end %>
 
-
 <ul>
   <% @people.each do |people| %>
     <li>
@@ -20,5 +19,5 @@
     </li>
   <% end %>
 
-  <%= link_to t('people.page_name.create'), new_person_path %>
+  <%= link_to I18n.t('page.people.create'), new_person_path %>
 </ul>

@@ -1,59 +1,71 @@
 en:
-  error:
-    not_found: Nothing found
+  activerecord:
+    models:
+      user: User
+      person: Person
+      email: Email
+      network: Social Network
+    attributes:
+      person:
+        first_name: First Name
+        middle_name: Middle Name
+        last_name: Last Name
+        user_name: User Name
+        nationality: Nationality
+        birth_date: Birth Date
+        currently_working_as: Currently working as
+        currently_working_at: Currently working at
+        currently_living_in: Currently living in
+        is_privately_wanted: Is privately wanted
+        is_publicly_wanted: Is publicly wanted
+        is_dangerous: Is dangerous
+        select_options:
+          male: Male
+          female: Female
+          other: Other
+        last_seen_date: Last seen date
+        last_seen_place: Last seen place
+      network:
+        twitter: Twitter
+        instagram: Instagram
+        facebook: Facebook
+        whatsapp: Whatsapp
+        snapchat: Snapchat
+        discord: Discord
+        pinterest: Pinterest
+        apple: Apple
+        google: Google
+        microsoft: Microsoft
+        mastodon: Mastodon
+        twitch: Twitch
+        kick: Kick
+        adobe: Adobe
+        bereal: BeReal
+  page:
+    people:
+      index: Index page
+      create: Create page
+      show: Details page
+      edit: Edit page
+    email:
+      index: Emails
+      create: Add an email
+    network:
+      index: Networks
+      create: Add a network
+    auth:
+      sign_in: Log In
+      sign_up: Sign Up
   button:
     submit: Submit
     edit: Edit
     back: Back
     destroy: Destroy
     search: Go
+    sign_in: Log In
+    sign_up: Sign Up
   action:
     confirmation: Are you sure?
-  email:
-    page_name:
-      index: Emails
-      create: Add an email
-  networks:
-    page_name:
-      index: Networks
-      create: Add a network
-    field:
-      twitter: Twitter
-      instagram: Instagram
-      facebook: Facebook
-      whatsapp: Whatsapp
-      snapchat: Snapchat
-      discord: Discord
-      pinterest: Pinterest
-      apple: Apple
-      google: Google
-      microsoft: Microsoft
-      mastodon: Mastodon
-  people:
-    page_name:
-      index: Index page
-      create: Create page
-      show: Details page
-      edit: Edit page
-    field:
-      first_name: First Name
-      middle_name: Middle Name
-      last_name: Last Name
-      user_name: User Name
-      nationality: Nationality
-      birth_date: Birth Date
-      currently_working_as: Currently working as
-      currently_working_at: Currently working at
-      currently_living_in: Currently living in
-      is_privately_wanted: Is privately wanted
-      is_publicly_wanted: Is publicly wanted
-      is_dangerous: Is dangerous
-      select_options:
-        male: Male
-        female: Female
-        other: Other
-      last_seen_date: Last seen date
-      last_seen_place: Last seen place
-    label:
-      search_bar: Search
-
+    search: Search
+  error:
+    not_found: Nothing found
