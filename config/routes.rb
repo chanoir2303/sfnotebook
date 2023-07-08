@@ -8,4 +8,6 @@ Rails.application.routes.draw do
     resources :networks
     resources :emails
   end
+  resources :emails
+  resources :networks
 end

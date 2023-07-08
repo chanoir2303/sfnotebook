@@ -1,6 +1,6 @@
-<nav class="navbar" role="navigation" aria-label="main navigation">
+<nav class="navbar" role="navigation" aria-label="main navigation" style="padding-right: 10px;">
   <div class="navbar-brand">
-      sfNotebook
+    <%= image_tag 'Component 1.png' %>
   </div>
 
   <div class="navbar-menu">
@@ -10,34 +10,21 @@
       </a>
 
       <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
+        <div class="navbar-link">
           <%= I18n.t('page.navbar.links.records') %>
-        </a>
-
+        </div>
         <div class="navbar-dropdown">
-          <a class="navbar-item">
-            <%= I18n.t('page.navbar.links.create') %>
-          </a>
-          <a class="navbar-item">
-            <%= I18n.t('page.navbar.links.people') %>
-          </a>
-          <a class="navbar-item">
-            <%= I18n.t('page.navbar.links.emails') %>
-          </a>
-          <a class="navbar-item">
-            <%= I18n.t('page.navbar.links.networks') %>
-          </a>
-          <a class="navbar-item">
-            <%= I18n.t('page.navbar.links.library') %>
-          </a>
+          <%= link_to I18n.t('page.navbar.links.create'), new_person_path, class: 'navbar-item' %>
+          <%= link_to I18n.t('page.navbar.links.people'), people_path, class: 'navbar-item' %>
+          <%= link_to I18n.t('page.navbar.links.emails'), emails_path, class: 'navbar-item' %>
+          <%= link_to I18n.t('page.navbar.links.networks'), networks_path, class: 'navbar-item' %>
+          <%= link_to I18n.t('page.navbar.links.library'), class: 'navbar-item' %>
         </div>
       </div>
 
       <a class="navbar-item">
         <%= I18n.t('page.navbar.links.map') %>
       </a>
-
-      <input class="input is-info" type="text" placeholder="Info input">
     </div>
 
     <div class="navbar-end">
@@ -55,5 +42,4 @@
       </div>
       <%  end %>
     </div>
-  </div>
 </nav>
