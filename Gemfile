@@ -66,6 +66,9 @@ gem 'devise'
 # Pundit for authorization policies
 gem 'pundit'
 
+# Fake data to seed
+gem 'faker'
+
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem

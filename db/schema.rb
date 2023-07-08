@@ -15,8 +15,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_08_160519) do
   enable_extension "plpgsql"
 
   create_table "comments", force: :cascade do |t|
-    t.text "body"
     t.bigint "person_id", null: false
+    t.text "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["person_id"], name: "index_comments_on_person_id"
