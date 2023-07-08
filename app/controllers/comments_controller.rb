@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# Handle comments registration. All comments belongs to a person.
 class CommentsController < ApplicationController
   before_action :authenticate_user!
 

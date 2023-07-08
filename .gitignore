@@ -36,3 +36,6 @@
 
 # Ignore docker-compose.yml config
 /docker-compose.yml
+
+# Ignore git files
+.gitattributes
