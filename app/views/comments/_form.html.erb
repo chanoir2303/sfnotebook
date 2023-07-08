@@ -1,0 +1,10 @@
+<h2><%= I18n.t('page.comment.create') %></h2>
+<%= form_with model: [ @person, @person.comments.build ] do |form| %>
+  <div>
+    <%= form.label :body %>
+    <%= form.text_area :body %>
+  </div>
+  <div>
+    <%= form.submit I18n.t('button.submit'), class: 'button is-info' %>
+  </div>
+<% end %>

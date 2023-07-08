@@ -1,0 +1,11 @@
+<h2><%= I18n.t('page.comment.index') %></h2>
+
+<div>
+  <% @person.comments.each do |comment| %>
+    <ul>
+      <% if comment.body.present? %>
+        <li><%= comment.body%></li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>

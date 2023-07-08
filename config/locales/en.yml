@@ -53,6 +53,9 @@ en:
     network:
       index: Networks
       create: Add a network
+    comment:
+      index: Comments
+      create: Add a comment
     auth:
       sign_in: Log In
       sign_up: Sign Up
