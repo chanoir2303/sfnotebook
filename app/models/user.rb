@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :rememberable, :trackable
 
-  has_many :people
+  has_many :people, dependent: :destroy
 
   def admin?
     role == 1

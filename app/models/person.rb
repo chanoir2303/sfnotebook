@@ -5,9 +5,9 @@
 class Person < ApplicationRecord
   include PgSearch::Model
 
-  has_many :networks
-  has_many :emails
-  has_many :comments
+  has_many :networks, dependent: :destroy
+  has_many :emails, dependent: :destroy
+  has_many :comments, dependent: :destroy
 
   belongs_to :user
 
