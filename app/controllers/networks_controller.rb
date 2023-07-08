@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# Handle social networks registration. All Network belongs to a Person.
+# Handle social networks registration. All networks belongs to a person.
 class NetworksController < ApplicationController
   def create
     @person = Person.find(params[:person_id])

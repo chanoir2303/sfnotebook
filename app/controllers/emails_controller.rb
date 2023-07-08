@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# Handle emails registration. All Email belongs to a Person.
+# Handle emails registration. All emails belongs to a person.
 class EmailsController < ApplicationController
   before_action :authenticate_user!
 
