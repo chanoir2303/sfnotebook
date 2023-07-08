@@ -7,6 +7,7 @@ class EmailsController < ApplicationController
   def index
     @emails = Email.all
   end
+
   def create
     @person = Person.find(params[:person_id])
     @email = @person.emails.create(email_params)
