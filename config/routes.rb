@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :people do
     resources :networks
     resources :emails
+    resources :comments
   end
   resources :emails
   resources :networks

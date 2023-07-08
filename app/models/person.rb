@@ -7,6 +7,7 @@ class Person < ApplicationRecord
 
   has_many :networks
   has_many :emails
+  has_many :comments
 
   belongs_to :user
 
