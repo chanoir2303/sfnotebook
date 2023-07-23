@@ -2,9 +2,10 @@
 
 # CRUD for Person model.
 class PeopleController < ApplicationController
+  include Pagy::Backend
   before_action :authenticate_user!
   def index
-    @people = Person.all
+    @pagy, @people = pagy(Person, items: 10)
     search
   end
 
@@ -50,11 +51,11 @@ class PeopleController < ApplicationController
   def search
     return if params[:query].blank?
 
-    @results = PgSearch.multisearch(params[:query])
-    if @results.empty?
+    @query = PgSearch.multisearch(params[:query])
+    if @query.empty?
       flash[:danger] = I18n.t('error.not_found')
     else
-      @r = @results.first.searchable
+      @query_results = @query.first.searchable
     end
   end
 

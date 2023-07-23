@@ -1,11 +1,10 @@
-<h2><%= I18n.t('page.comment.index') %></h2>
-
-<div>
+<ul class="list-group">
   <% @person.comments.each do |comment| %>
-    <ul>
-      <% if comment.body.present? %>
-        <li><%= comment.body%></li>
-      <% end %>
-    </ul>
+    <% if comment.body.present? %>
+      <li class="list-group-item">
+        <strong><%= comment.created_at %></strong>
+        <%= comment.body %>
+      </li>
+    <% end %>
   <% end %>
-</div>
+</ul>

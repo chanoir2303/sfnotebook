@@ -1,81 +1,23 @@
 <h2><%= I18n.t('page.network.create') %></h2>
-<%= form_with model: [ @person, @person.networks.build ] do |form| %>
-  <div>
-    <%= form.label :twitter %>
-    <%= form.text_field :twitter %>
+<div class="card">
+  <div class="card-content">
+    <%= form_with model: [ @person, @person.networks.build ] do |form| %>
+      <%= form.text_field :twitter, class: 'input is-info is-small'%>
+      <%= form.text_field :instagram, class: 'input is-info is-small' %>
+      <%= form.text_field :facebook, class: 'input is-info is-small' %>
+      <%= form.text_field :whatsapp, class: 'input is-info is-small' %>
+      <%= form.text_field :snapchat, class: 'input is-info is-small' %>
+      <%= form.text_field :discord, class: 'input is-info is-small' %>
+      <%= form.text_field :pinterest, class: 'input is-info is-small' %>
+      <%= form.text_field :apple, class: 'input is-info is-small' %>
+      <%= form.text_field :google, class: 'input is-info is-small' %>
+      <%= form.text_field :microsoft, class: 'input is-info is-small' %>
+      <%= form.text_field :mastodon, class: 'input is-info is-small' %>
+      <%= form.text_field :twitch, class: 'input is-info is-small' %>
+      <%= form.text_field :kick, class: 'input is-info is-small' %>
+      <%= form.text_field :adobe, class: 'input is-info is-small' %>
+      <%= form.text_field :bereal, class: 'input is-info is-small' %>
+      <%= form.submit I18n.t('button.submit'), class: 'button is-info' %>
+    <% end %>
   </div>
-
-  <div>
-    <%= form.label :instagram %>
-    <%= form.text_field :instagram %>
-  </div>
-
-  <div>
-    <%= form.label :facebook %>
-    <%= form.text_field :facebook %>
-  </div>
-
-  <div>
-    <%= form.label :whatsapp %>
-    <%= form.text_field :whatsapp %>
-  </div>
-
-  <div>
-    <%= form.label :snapchat %>
-    <%= form.text_field :snapchat %>
-  </div>
-
-  <div>
-    <%= form.label :discord %>
-    <%= form.text_field :discord %>
-  </div>
-
-  <div>
-    <%= form.label :pinterest %>
-    <%= form.text_field :pinterest %>
-  </div>
-
-  <div>
-    <%= form.label :apple %>
-    <%= form.text_field :apple %>
-  </div>
-
-  <div>
-    <%= form.label :google %>
-    <%= form.text_field :google %>
-  </div>
-
-  <div>
-    <%= form.label :microsoft %>
-    <%= form.text_field :microsoft %>
-  </div>
-
-  <div>
-    <%= form.label :mastodon %>
-    <%= form.text_field :mastodon %>
-  </div>
-
-  <div>
-    <%= form.label :twitch %>
-    <%= form.text_field :twitch %>
-  </div>
-
-  <div>
-    <%= form.label :kick %>
-    <%= form.text_field :kick %>
-  </div>
-
-  <div>
-    <%= form.label :adobe %>
-    <%= form.text_field :adobe %>
-  </div>
-
-  <div>
-    <%= form.label :bereal %>
-    <%= form.text_field :bereal %>
-  </div>
-
-  <div>
-    <%= form.submit I18n.t('button.submit'), class: 'button is-info' %>
-  </div>
-<% end %>
+</div>

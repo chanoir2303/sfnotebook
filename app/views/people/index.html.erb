@@ -1,17 +1,47 @@
-<h1><%= I18n.t('page.people.index') %></h1>
-
-<%= render 'multisearchable' %>
-
-<% if @results.present? %>
-  <%= @r.first_name %>
-<% end %>
-
-<ul>
-  <% @people.each do |people| %>
-    <li>
-      <%= link_to people.first_name, people %>
-    </li>
-  <% end %>
-
-  <%= link_to I18n.t('page.people.create'), new_person_path %>
-</ul>
+<div class="container">
+  <%= render 'shared/multisearch' %>
+  <table class="table">
+    <thead>
+    <tr>
+      <th><%= I18n.t('activerecord.attributes.person.first_name') %></th>
+      <th><%= I18n.t('activerecord.attributes.person.last_name') %></th>
+      <th><%= I18n.t('activerecord.attributes.person.nationality') %></th>
+      <th><%= I18n.t('activerecord.attributes.person.select_options.gender') %></th>
+      <th><%= I18n.t('activerecord.models.comment') %></th>
+      <th><%= I18n.t('activerecord.models.email') %></th>
+      <th>Library</th>
+      <th><%= I18n.t('devise.activerecords.created_by') %></th>
+    </tr>
+    </thead>
+    <tbody>
+    <% if @query.present? %>
+      <tr>
+        <td><%= @query_results.first_name %></td>
+        <td><%= @query_results.last_name %></td>
+        <td><%= @query_results.nationality %></td>
+        <td><%= @query_results.gender %></td>
+        <td><%= @query_results.emails.size %></td>
+        <td><%= @query_results.comments.size %></td>
+        <td>2303</td>
+        <td><%= @query_results.user.email %></td>
+        <td><%= link_to I18n.t('page.people.show'), @query_results, class: 'btn btn-primary' %></td>
+      </tr>
+    <% else %>
+      <% @people.each do |people| %>
+        <tr>
+          <td><%= people.first_name %></td>
+          <td><%= people.last_name %></td>
+          <td><%= people.nationality %></td>
+          <td><%= people.gender %></td>
+          <td><%= people.emails.size %></td>
+          <td><%= people.comments.size %></td>
+          <td>2303</td>
+          <td><%= people.user.email %></td>
+          <td><%= link_to I18n.t('page.people.show'), people, class: 'btn btn-primary' %></td>
+        </tr>
+      <% end %>
+    <% end %>
+    </tbody>
+  </table>
+  <%== render partial: 'shared/pagination', locals: {pagy: @pagy} %>
+</div>

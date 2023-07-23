@@ -1,0 +1,4 @@
+<%= bootstrap_form_with(method: :get, class: 'input-group mb-3') do %>
+  <%= text_field_tag :query, params[:query], placeholder: I18n.t('action.search'), class: 'form-control' %>
+  <%= submit_tag I18n.t('button.search'), class: 'btn btn-primary' %>
+<% end %>
