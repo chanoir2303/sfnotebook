@@ -1,36 +1,91 @@
-<h1><%= I18n.t('page.people.show') %></h1>
-<%= @person.id %>
-<%= @person.first_name %>
-<%= @person.middle_name %>
-<%= @person.last_name %>
-<%= @person.user_name %>
-<%= @person.nationality %>
-<%= @person.birth_date %>
-<%= @person.currently_working_as %>
-<%= @person.currently_working_at %>
-<%= @person.currently_living_in %>
-<%= @person.is_privately_wanted %>
-<%= @person.is_publicly_wanted %>
-<%= @person.is_dangerous %>
-<%= @person.gender %>
-<%= @person.last_seen_date %>
-<%= @person.last_seen_place %>
+<div class="container-sm mb-3">
+  <%= link_to I18n.t('button.edit'), edit_person_path(@person), class: 'btn btn-primary' %>
+  <%= link_to I18n.t('button.destroy'),
+              person_path(@person),
+              class: 'btn btn-danger',
+              data: {
+                turbo_method: :delete,
+                turbo_confirm: I18n.t('action.confirmation'),
+              } %>
+  <%= link_to I18n.t('button.back'), root_path, class: 'btn btn-secondary' %>
+</div>
+<div class="container text-center mb-3">
+  <div class="row align-items-start">
+    <div class="col">
+      <ul class="list-group">
+        <li class="list-group-item">
+          <strong><%= I18n.t('activerecord.attributes.person.first_name') %></strong>: :
+          <%= @person.first_name %>
+        </li>
+        <li class="list-group-item">
+          <strong><%= I18n.t('activerecord.attributes.person.middle_name') %></strong>:
+          <%= @person.middle_name %>
+        </li>
+        <li class="list-group-item">
+          <strong><%= I18n.t('activerecord.attributes.person.last_name') %></strong>:
+          <%= @person.last_name %>
+        </li>
+        <li class="list-group-item">
+          <strong><%= I18n.t('activerecord.attributes.person.user_name') %></strong>:
+          <%= @person.user_name %>
+        </li>
+        <li class="list-group-item">
+          <strong><%= I18n.t('activerecord.attributes.person.nationality') %></strong>:
+          <%= @person.nationality %>
+        </li>
+        <li class="list-group-item">
+          <strong><%= I18n.t('activerecord.attributes.person.birth_date') %></strong>:
+          <%= @person.birth_date %>
+        </li>
+        <li class="list-group-item">
+          <strong><%= I18n.t('activerecord.attributes.person.currently_working_as') %></strong>:
+          <%= @person.currently_working_as %>
+        </li>
+        <li class="list-group-item">
+          <strong><%= I18n.t('activerecord.attributes.person.currently_working_at') %></strong>:
+          <%= @person.currently_working_at %>
+        </li>
+        <li class="list-group-item">
+          <strong><%= I18n.t('activerecord.attributes.person.currently_living_in') %></strong>:
+          <%= @person.currently_living_in %>
+        </li>
+        <li class="list-group-item">
+          <strong><%= I18n.t('activerecord.attributes.person.is_privately_wanted') %></strong>:
+          <%= @person.is_privately_wanted %>
+        </li>
+        <li class="list-group-item">
+          <strong><%= I18n.t('activerecord.attributes.person.is_publicly_wanted') %></strong>:
+          <%= @person.is_publicly_wanted %>
+        </li>
+        <li class="list-group-item">
+          <strong><%= I18n.t('activerecord.attributes.person.is_dangerous') %></strong>:
+          <%= @person.is_dangerous %>
+        </li>
+        <li class="list-group-item">
+          <strong><%= I18n.t('activerecord.attributes.person.select_options.gender') %></strong>:
+          <%= @person.gender %>
+        </li>
+        <li class="list-group-item">
+          <strong><%= I18n.t('activerecord.attributes.person.last_seen_date') %></strong>:
+          <%= @person.last_seen_date %>
+        </li>
+        <li class="list-group-item">
+          <strong><%= I18n.t('activerecord.attributes.person.last_seen_place') %></strong>:
+          <%= @person.last_seen_place %>
+        </li>
+      </ul>
+    </div>
+    <div class="col">
+      <%= render 'emails/list' %>
+    </div>
+    <div class="col">
+      <%=render 'networks/list' %>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <%= render 'comments/list' %>
+</div>
 
-<%= link_to I18n.t('button.edit'), edit_person_path(@person), class: 'button is-info' %>
-<%= link_to I18n.t('button.back'), root_path, class: 'button is-info is-light' %>
-<%= link_to I18n.t('button.destroy'),
-            person_path(@person),
-            class: 'button is-danger',
-            data: {
-  turbo_method: :delete,
-  turbo_confirm: I18n.t('action.confirmation'),
-} %>
 
-<%= render 'networks/list' %>
-<%= render 'networks/form' %>
 
-<%= render 'emails/list' %>
-<%= render 'emails/form' %>
-
-<%= render 'comments/list' %>
-<%= render 'comments/form' %>

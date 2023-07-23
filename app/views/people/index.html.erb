@@ -1,5 +1,5 @@
 <div class="container">
-  <%= render 'shared/multisearchable' %>
+  <%= render 'shared/multisearch' %>
   <table class="table">
     <thead>
     <tr>
@@ -24,7 +24,7 @@
         <td><%= @query_results.comments.size %></td>
         <td>2303</td>
         <td><%= @query_results.user.email %></td>
-        <td><%= link_to I18n.t('action.show'), @query_results, class: 'btn btn-primary' %></td>
+        <td><%= link_to I18n.t('page.people.show'), @query_results, class: 'btn btn-primary' %></td>
       </tr>
     <% else %>
       <% @people.each do |people| %>
@@ -37,7 +37,7 @@
           <td><%= people.comments.size %></td>
           <td>2303</td>
           <td><%= people.user.email %></td>
-          <td><%= link_to I18n.t('action.show'), people, class: 'btn btn-primary' %></td>
+          <td><%= link_to I18n.t('page.people.show'), people, class: 'btn btn-primary' %></td>
         </tr>
       <% end %>
     <% end %>

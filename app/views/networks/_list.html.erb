@@ -1,141 +1,115 @@
-<h2><%= I18n.t('page.network.index') %></h2>
-
-<div>
-  <h5><%= I18n.t('activerecord.attributes.network.twitter') %></h5>
-  <% @person.networks.each do |network| %>
-    <ul>
-      <% if network.twitter.present? %>
-        <li><%= network.twitter %></li>
-      <% end %>
-    </ul>
-  <% end %>
-</div>
-
-<div>
-  <h5><%= I18n.t('activerecord.attributes.network.instagram') %></h5>
-  <% @person.networks.each do |network| %>
-    <ul>
-      <% if network.instagram.present? %>
-        <li><%= network.instagram %></li>
-      <% end %>
-    </ul>
-  <% end %>
-</div>
-
-
-<h5><%= I18n.t('activerecord.attributes.network.facebook') %></h5>
 <% @person.networks.each do |network| %>
-  <ul>
-    <% if network.facebook.present? %>
-      <li><%= network.facebook %></li>
+  <ul class="list-group">
+    <% unless network.twitter.blank? %>
+      <li class="list-group-item">
+        <strong><%= I18n.t('activerecord.attributes.network.twitter') %>: </strong>
+        <%= network.twitter %>
+      </li>
     <% end %>
-  </ul>
-<% end %>
 
-<h5><%= I18n.t('activerecord.attributes.network.whatsapp') %></h5>
-<% @person.networks.each do |network| %>
-  <ul>
-    <% if network.whatsapp.present? %>
-      <li><%= network.whatsapp %></li>
+    <% unless network.instagram.blank?%>
+      <li class="list-group-item">
+        <strong><%= I18n.t('activerecord.attributes.network.instagram') %>: </strong>
+        <%= network.instagram %>
+      </li>
     <% end %>
-  </ul>
-<% end %>
 
-<h5><%= I18n.t('activerecord.attributes.network.snapchat') %></h5>
-<% @person.networks.each do |network| %>
-  <ul>
-    <% if network.snapchat.present? %>
-      <li><%= network.snapchat %></li>
+    <% unless network.facebook.blank? %>
+      <li class="list-group-item">
+        <strong><%= I18n.t('activerecord.attributes.network.facebook') %>: </strong>
+        <%= network.facebook %>
+      </li>
     <% end %>
-  </ul>
-<% end %>
 
-<h5><%= I18n.t('activerecord.attributes.network.discord') %></h5>
-<% @person.networks.each do |network| %>
-  <ul>
-    <% if network.discord.present? %>
-      <li><%= network.discord %></li>
+    <% unless network.whatsapp.blank? %>
+      <li class="list-group-item">
+        <strong><%= I18n.t('activerecord.attributes.network.whatsapp') %>: </strong>
+        <%= network.whatsapp %>
+      </li>
     <% end %>
-  </ul>
-<% end %>
 
-<h5><%= I18n.t('activerecord.attributes.network.pinterest') %></h5>
-<% @person.networks.each do |network| %>
-  <ul>
-    <% if network.pinterest.present? %>
-      <li><%= network.pinterest %></li>
+    <% unless network.tiktok.blank? %>
+      <li class="list-group-item">
+        <strong><%= I18n.t('activerecord.attributes.network.tiktok') %>: </strong>
+        <%= network.tiktok %>
+      </li>
     <% end %>
-  </ul>
-<% end %>
 
-<h5><%= I18n.t('activerecord.attributes.network.apple') %></h5>
-<% @person.networks.each do |network| %>
-  <ul>
-    <% if network.apple.present? %>
-      <li><%= network.apple %></li>
+    <% unless network.snapchat.blank? %>
+      <li class="list-group-item">
+        <strong><%= I18n.t('activerecord.attributes.network.snapchat') %>: </strong>
+        <%= network.snapchat %>
+      </li>
     <% end %>
-  </ul>
-<% end %>
 
-<h5><%= I18n.t('activerecord.attributes.network.google') %></h5>
-<% @person.networks.each do |network| %>
-  <ul>
-    <% if network.google.present? %>
-      <li><%= network.google %></li>
+    <% unless network.discord.blank? %>
+      <li class="list-group-item">
+        <strong><%= I18n.t('activerecord.attributes.network.discord') %>: </strong>
+        <%= network.discord %>
+      </li>
     <% end %>
-  </ul>
-<% end %>
 
-<h5><%= I18n.t('activerecord.attributes.network.microsoft') %></h5>
-<% @person.networks.each do |network| %>
-  <ul>
-    <% if network.microsoft.present? %>
-      <li><%= network.microsoft %></li>
+    <% unless network.pinterest.blank? %>
+      <li class="list-group-item">
+        <strong><%= I18n.t('activerecord.attributes.network.pinterest') %>: </strong>
+        <%= network.pinterest %>
+      </li>
     <% end %>
-  </ul>
-<% end %>
 
-<h5><%= I18n.t('activerecord.attributes.network.mastodon') %></h5>
-<% @person.networks.each do |network| %>
-  <ul>
-    <% if network.mastodon.present? %>
-      <li><%= network.mastodon %></li>
+    <% unless network.apple.blank? %>
+      <li class="list-group-item">
+        <strong><%= I18n.t('activerecord.attributes.network.apple') %>: </strong>
+        <%= network.apple %>
+      </li>
     <% end %>
-  </ul>
-<% end %>
 
-<h5><%= I18n.t('activerecord.attributes.network.twitch') %></h5>
-<% @person.networks.each do |network| %>
-  <ul>
-    <% if network.twitch.present? %>
-      <li><%= network.twitch %></li>
+    <% unless network.google.blank? %>
+      <li class="list-group-item">
+        <strong><%= I18n.t('activerecord.attributes.network.google') %>: </strong>
+        <%= network.google %>
+      </li>
     <% end %>
-  </ul>
-<% end %>
 
-<h5><%= I18n.t('activerecord.attributes.network.kick') %></h5>
-<% @person.networks.each do |network| %>
-  <ul>
-    <% if network.kick.present? %>
-      <li><%= network.kick %></li>
+    <% unless network.microsoft.blank? %>
+      <li class="list-group-item">
+        <strong><%= I18n.t('activerecord.attributes.network.microsoft') %>: </strong>
+        <%= network.microsoft %>
+      </li>
     <% end %>
-  </ul>
-<% end %>
 
-<h5><%= I18n.t('activerecord.attributes.network.adobe') %></h5>
-<% @person.networks.each do |network| %>
-  <ul>
-    <% if network.adobe.present? %>
-      <li><%= network.adobe %></li>
+    <% unless network.mastodon.blank? %>
+      <li class="list-group-item">
+        <strong><%= I18n.t('activerecord.attributes.network.mastodon') %>: </strong>
+        <%= network.mastodon %>
+      </li>
     <% end %>
-  </ul>
-<% end %>
 
-<h5><%= I18n.t('activerecord.attributes.network.bereal') %></h5>
-<% @person.networks.each do |network| %>
-  <ul>
-    <% if network.bereal.present? %>
-      <li><%= network.bereal %></li>
+    <% unless network.twitch.blank? %>
+      <li class="list-group-item">
+        <strong><%= I18n.t('activerecord.attributes.network.twitch') %>: </strong>
+        <%= network.twitch %>
+      </li>
+    <% end %>
+
+    <% unless network.kick.blank? %>
+      <li class="list-group-item">
+        <strong><%= I18n.t('activerecord.attributes.network.kick') %>: </strong>
+        <%= network.kick %>
+      </li>
+    <% end %>
+
+    <% unless network.adobe.blank? %>
+      <li class="list-group-item">
+        <strong><%= I18n.t('activerecord.attributes.network.adobe') %>: </strong>
+        <%= network.adobe %>
+      </li>
+    <% end %>
+
+    <% unless network.bereal.blank? %>
+      <li class="list-group-item">
+        <strong><%= I18n.t('activerecord.attributes.network.bereal') %>: </strong>
+        <%= network.bereal %>
+      </li>
     <% end %>
   </ul>
 <% end %>

@@ -32,6 +32,7 @@ en:
         instagram: Instagram
         facebook: Facebook
         whatsapp: Whatsapp
+        tiktok: TikTok
         snapchat: Snapchat
         discord: Discord
         pinterest: Pinterest
@@ -45,10 +46,10 @@ en:
         bereal: BeReal
   page:
     people:
-      index: Index page
-      create: Create page
-      show: Details page
-      edit: Edit page
+      index: List
+      create: Create
+      show: Show
+      edit: Edit
     email:
       index: Emails
       create: Add an email
@@ -83,6 +84,5 @@ en:
   action:
     confirmation: Are you sure?
     search: Search
-    show: Show
   error:
     not_found: Nothing found

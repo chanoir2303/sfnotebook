@@ -1,11 +1,8 @@
-<h2><%= I18n.t('page.email.index') %></h2>
-
-<div>
+<ul class="list-group">
   <% @person.emails.each do |email| %>
-    <ul>
-      <% if email.email.present? %>
-        <li><%= email.email %></li>
-      <% end %>
-    </ul>
+    <li class="list-group-item"><%= email.email %></li>
   <% end %>
-</div>
+</ul>
+
+
+
