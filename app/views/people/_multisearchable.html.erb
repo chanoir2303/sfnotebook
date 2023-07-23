@@ -1,4 +1,0 @@
-<%= form_with(url: people_path, method: :get) do %>
-  <%= text_field_tag :query, params[:query], placeholder: I18n.t('action.search') %>
-  <%= submit_tag I18n.t('button.search') %>
-<% end %>

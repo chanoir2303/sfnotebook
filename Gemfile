@@ -18,6 +18,9 @@ gem 'pg'
 # Multisearchable
 gem 'pg_search'
 
+# Pagination
+gem 'pagy'
+
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '~> 5.0'
 
@@ -57,8 +60,11 @@ gem 'sassc-rails'
 # Rubocop
 gem 'rubocop', require: false
 
-# Bulma CSS for Rails
-gem 'bulma-rails', '~> 0.9.4'
+# Bootstrap CSS for Rails
+gem 'bootstrap'
+
+# Rails Bootstrap form
+gem 'bootstrap_form'
 
 # Devise for user authentication
 gem 'devise'

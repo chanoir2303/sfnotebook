@@ -5,6 +5,7 @@ en:
       person: Person
       email: Email
       network: Social Network
+      comment: Comments
     attributes:
       person:
         first_name: First Name
@@ -20,6 +21,7 @@ en:
         is_publicly_wanted: Is publicly wanted
         is_dangerous: Is dangerous
         select_options:
+          gender: Gender
           male: Male
           female: Female
           other: Other
@@ -81,5 +83,6 @@ en:
   action:
     confirmation: Are you sure?
     search: Search
+    show: Show
   error:
     not_found: Nothing found
