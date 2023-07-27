@@ -1,5 +1,6 @@
 <% @person.networks.each do |network| %>
   <ul class="list-group">
+    <li class="list-group-item"><strong>Networks</strong></li>
     <% unless network.twitter.blank? %>
       <li class="list-group-item">
         <strong><%= I18n.t('activerecord.attributes.network.twitter') %>: </strong>

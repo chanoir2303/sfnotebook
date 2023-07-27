@@ -1,45 +1,16 @@
-<nav class="navbar" role="navigation" aria-label="main navigation" style="padding-right: 10px;">
-  <div class="navbar-brand">
-    <%= image_tag 'logo.png' %>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <%= image_tag('logo.png')%>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <%= link_to I18n.t('page.navbar.links.dashboard'), '#', class: 'nav-link disable' %>
+        <%= link_to I18n.t('page.navbar.links.records'), people_path, class: 'nav-link' %>
+        <%= link_to I18n.t('page.navbar.links.library'), '#', class: 'nav-link disable' %>
+        <%= link_to I18n.t('page.navbar.links.map'), '#', class: 'nav-link disable' %>
+      </div>
+    </div>
   </div>
-
-  <div class="navbar-menu">
-    <div class="navbar-start">
-      <a class="navbar-item">
-        <%= I18n.t('page.navbar.links.dashboard') %>
-      </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <div class="navbar-link">
-          <%= I18n.t('page.navbar.links.records') %>
-        </div>
-        <div class="navbar-dropdown">
-          <%= link_to I18n.t('page.navbar.links.create'), new_person_path, class: 'navbar-item' %>
-          <%= link_to I18n.t('page.navbar.links.people'), people_path, class: 'navbar-item' %>
-          <%= link_to I18n.t('page.navbar.links.emails'), emails_path, class: 'navbar-item' %>
-          <%= link_to I18n.t('page.navbar.links.networks'), networks_path, class: 'navbar-item' %>
-          <%= link_to I18n.t('page.navbar.links.library'), class: 'navbar-item' %>
-        </div>
-      </div>
-
-      <a class="navbar-item">
-        <%= I18n.t('page.navbar.links.map') %>
-      </a>
-    </div>
-
-    <div class="navbar-end">
-      <% if current_user %>
-      <a class="navbar-item">
-        <%=  current_user.email  %>
-      </a>
-      </div>
-      <div class="buttons">
-        <strong><%=  link_to I18n.t('button.sign_out'), destroy_user_session_path, method: :delete, class: 'button is-info'  %></strong>
-      </div>
-      <%  else  %>
-      <div class="navbar-item">
-        <strong><%= link_to I18n.t('page.auth.sign_up'), new_registration_path(resource_name), class: 'button is-info' %></strong>
-      </div>
-      <%  end %>
-    </div>
 </nav>
